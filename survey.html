@@ -2,15 +2,42 @@
 <html>
     <head>
         <title>FCC Survey Form</title>
-        <link href="main.css" type="text/css">
+        <link rel="stylesheet" href="main.css" type="text/css">
     </head>
     <main id="main">
-        <div id="title">
-            <h1>Customer Satisfaction Survey</h1>
-            <p>Thank you for taking the time to tell us how we're doing!</p>
-        </div>
-        <div id="full-form">
-            <p>Name</p>
+        <h1 id="title">Customer Satisfaction Survey</h1>
+        <p id="description">Thank you for taking the time to tell us how we're doing!</p>
+        
+        <div id="survey-form">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Full Name Here" required>
+
+                <label for="email">E-mail Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter E-mail Address Here" required>
+
+                <label for="age">Age (optional)</label>
+                <input type="number" id="age" name="age" placeholder="Age" min="13" max="120">
+
+                <label for="storelocation">Which store are you leaving feedback for?</label>
+                <select id="storelocation">
+                    <option value="cleveland">Cleveland</option>
+                    <option value="nyc">New York City</option>
+                    <option value="miami">Miami</option>
+                    <option value="losangeles">Los Angeles</option>
+                </select>
+                <p>How satisified were you with our service?</p>
+                <input type="radio" id="notsatisfied" name="satisfaction" value="notsatisfied">
+                <label for="notsatisfied">Not at all satisfied</label><br>
+                <input type="radio" id="somewhatdissatisfied" name="satisfaction" value="somewhatdissatisfied">
+                <label for="somewhatdissatisfied">Somewhat dissatisfied</label><br>
+                <input type="radio" id="neithernor" name="satisfaction" value="neithernor">
+                <label for="neithernor">Neither nor</label><br>
+                <input type="radio" id="somewhatsatisfied" name="satisfaction" value="somewhatsatisfied">
+                <label for="somewhatsatisfied">Somewhat satisfied</label><br>
+                <input type="radio" id="verysatisfied" name="satisfaction" value="verysatisfied">
+                <label for="verysatisfied">Very satisfied</label><br>
+            </form>
         </div>
     </main>
 </html>

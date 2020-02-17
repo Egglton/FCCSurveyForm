@@ -3,6 +3,7 @@
     <head>
         <title>FCC Survey Form</title>
         <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     </head>
     <main>
         <header>
@@ -11,8 +12,38 @@
         </header>
         <div class="container">
             <form id="survey-form">
-                <label for="fullname">Full Name</label><br>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter Full Name" required>
+                <p>
+                    <label for="fullname">Full Name</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter Full Name" required>
+                </p>
+                <p>
+                    <label for="email">Email Address</label><br>
+                    <input type="email" id="email" name="email" placeholder="Enter E-mail Address" required>
+                </p>
+                <p>
+                    <label for="age">Age</label><br>
+                    <input type="number" id="age" name="age" placeholder="Please Enter Your Age" required min="13" max="125">
+                </p>
+                <p>
+                    <label for="location">Which location are you leaving feedback?</label><br>
+                    <select id="location" name="location">
+                        <option value="cleveland">Cleveland</option>
+                        <option value="newyork">New York</option>
+                        <option value="austin">Austin</option>
+                        <option value="losangeles">Los Angeles</option>
+                        <option value="miami">Miami</option>
+                    </select>
+                </p>
+
+                <p>Any comments or suggestion?</p>
+                    <label for="comments">
+                        <textarea id="comments"></textarea>
+                    </label><br>   
+
+                <p>
+                    <input type="submit" value="Submit">
+                </p>        
+
             </form>
         </div>
     </main>
